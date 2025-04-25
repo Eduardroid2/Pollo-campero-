@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galería de Productos</title>
+  <link rel="stylesheet" href="styles.css"
+  />
+    <link rel="stylesheet" href="img.css"/>
+</head>
+<body>
+    <header>
+    
+    <header class="nav-header">
+  <div class="logo-container">
+    <img src="logo.jpg" alt="Pollo Campero" />
+  </div>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="galeria.html">Galería de Productos</a></li>
+      <li><a href="ubicaciones.html">Ubicaciones</a></li>
+      <li><a href="contacto.html">Contactos</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <main class="content">
+    <h1>Nuestros Productos</h1>
+    <div class="galeria">
+      <!-- 8 productos de ejemplo -->
+      <div class="producto"><img src="pollo7.jpg" alt="Producto 1"><p>Pollo Frito Clásico</p></div>
+      <div class="producto"><img src="pollo4.jpg" alt="Producto 2"><p>Camperitos</p></div>
+      <div class="producto"><img src="pollo5.jpg" alt="Producto 3"><p>Hamburguesa Campero</p></div>
+      <div class="producto"><img src="pollo9.jpg" alt="Producto 4"><p>Ensalada fresca</p></div>
+      <div class="producto"><img src="pollo1.png" alt="Producto 5"><p>Pollo Extra Crujiente</p></div>
+      <div class="producto"><img src="pollo1.png" alt="Producto 6"><p>Alitas Picantes</p></div>
+      <div class="producto"><img src="pollo8.jpg" alt="Producto 7"><p>Refrescos Naturales</p></div>
+      <div class="producto"><img src="pollo3.jpg" alt="producto 8"><p>Postres Campero</p></div>
+      <section class="carrusel">
+  <h2>Descubre nuestras promociones</h2>
+  <div class="slider" onclick="siguienteSlide()">
+    <img src="pollo1.png" alt="Promoción 1" class="slide activo">
+    <img src="pollo2.png" alt="Promoción 2" class="slide">
+    <img src="pollo3.jpg" alt="Promoción 3" class="slide">
+    <img src="pollo4.jpg" alt="Promoción 4" class="slide">
+  </div>
+</section>
+    </div>
+
+
+  </main>
+  <script>
+  const navHeader = document.querySelector('.nav-header');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navHeader.classList.add('scroll');
+    } else {
+      navHeader.classList.remove('scroll');
+    }
+  });
+</script>
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('.slide');
+
+  function mostrarSlide() {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('activo');
+    });
+    slideIndex = (slideIndex + 1) % slides.length;
+    slides[slideIndex].classList.add('activo');
+  }
+
+  function siguienteSlide() {
+    mostrarSlide();
+  }
+
+  setInterval(mostrarSlide, 4000); // cambia cada 4 segundos
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+.lista-ubicaciones {
+  list-style: square;
+  padding-left: 20px;
+  margin-top: 30px;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.lista-ubicaciones li {
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 5px black;
+}

@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  min-height: 100vh;
+}
+
+.nav-header {
+  background: linear-gradient(270deg, #f9a825, #f57c00, #e65100);
+  background-size: 600% 600%;
+  animation: gradienteAnimado 10s ease infinite;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 4px solid #fff3e0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.4s ease;
+}
+
+.nav-header.scroll {
+  padding: 8px 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes gradienteAnimado {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.logo-container img {
+  height: 60px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+.logo-container img:hover {
+  transform: scale(1.1);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li a {
+  color: #fff3e0;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.4s ease;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar li a:hover {
+  background-color: #fff3e0;
+  color: #e65100;
+  transform: scale(1.05);
+}
+
+.content {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px black;
+}
+
+.content p {
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 5px black;
+}
+
+button {
+  background-color: #fff3e0;
+  color: black;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #fce0c0;
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-container img {
+    height: 50px;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+}
+

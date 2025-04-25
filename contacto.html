@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto | Pollocampero</title>
+  <link rel="stylesheet" href="Contac.css">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    
+    <header class="nav-header">
+  <div class="logo-container">
+    <img src="logo.jpg" alt="Pollo Campero" />
+  </div>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="galeria.html">Galería de Productos</a></li>
+      <li><a href="ubicaciones.html">Ubicaciones</a></li>
+      <li><a href="contactos.html">Contactos</a></li>
+    </ul>
+  </nav>
+</header>
+  <h1>Contáctanos - Pollo Campero</h1>
+  <p class="intro">En Pollo Campero, estamos para ayudarte con soluciones ideas modernas e innovadoras. ¿Tienes alguna duda o queja en mente? ¡Escríbenos!</p>
+
+  <div class="contacto-container">
+    <!-- Formulario -->
+    <div class="formulario">
+      <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+        <label for="email">Correo:</label>
+        <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+
+    <!-- Información de contacto -->
+    <div class="info-empresa">
+      <h3>Pollo Campero Guatemala</h3>
+      <p>Zona 4, Ciudad de Guatemala</p>
+      <p>Tel: +502 1234-5678</p>
+      <p>Email: contacto@Pollocampero.gt</p>
+      <p>Horario: Lunes a Viernes de 8am a 5pm</p>
+    </div>
+  </div>
+  <script>
+  const formulario = document.querySelector("form");
+
+  formulario.addEventListener("submit", function(event) {
+    event.preventDefault(); // Evita que la página se recargue
+    alert("¡Gracias por contactarnos, te responderemos pronto!");
+    formulario.reset(); // Limpia el formulario
+  });
+</script>
+<script>
+  const navHeader = document.querySelector('.nav-header');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navHeader.classList.add('scroll');
+    } else {
+      navHeader.classList.remove('scroll');
+    }
+  });
+</script>
+</body>
+</html>
